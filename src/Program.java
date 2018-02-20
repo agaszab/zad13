@@ -5,12 +5,14 @@ public class Program {
     public static void main(String[] args) {
 
 
-        int wybor1 = pokazOpcje();
+       int wybor1=0;
         ArrayList<Product> wydatki = new ArrayList<>();
         Product prod=new Product();
-        Expense expense = new Expense();
+        System.out.println(wybor1);
+       // Expense expense = new Expense();
 
         while (wybor1!=3) {
+        wybor1 = pokazOpcje();
         switch (wybor1) {
             case 0:  prod.addProduct(wydatki); break;
             case 1:  int wybor2 = pokazSortowanie();
