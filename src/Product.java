@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Product {
 
     private String name;
@@ -10,6 +13,9 @@ public class Product {
         this.description = description;
         this.price = price;
         this.category = category;
+    }
+
+    public Product() {
     }
 
     public String getName() {
@@ -48,5 +54,29 @@ public class Product {
     public String toString() {
         return "Mazwa produktu/usługi: " + name + " (" + description + "), kategoria: "+category+"cena: " + price;
     }
+
+    public void addProduct(ArrayList list) {
+
+        Scanner scan = new Scanner(System.in);
+        String name;
+        String description;
+        String category;
+        int price;
+
+        System.out.println("Podaj nazwę produktu/usługi:");
+        name = scan.nextLine();
+        System.out.println("Podaj opis:");
+        description = scan.nextLine();
+        System.out.println("Podaj kategorię:");
+        category = scan.nextLine();
+        System.out.println("Podaj cenę:");
+        price = scan.nextInt();
+        scan.nextLine();
+
+        Product prod = new Product(name, description, price, category);
+        list.add(prod);
+
+    }
+
 
 }

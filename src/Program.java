@@ -7,13 +7,14 @@ public class Program {
 
         int wybor1 = pokazOpcje();
         ArrayList<Product> wydatki = new ArrayList<>();
+        Product prod=new Product();
         Expense expense = new Expense();
 
-        //    while (wybor!=3) {
+        while (wybor1!=3) {
         switch (wybor1) {
-            case 0:  expense.addProduct(); break;
+            case 0:  prod.addProduct(wydatki); break;
             case 1:  int wybor2 = pokazSortowanie();
-                Comparator comparator;
+                Comparator comparator= new NameComparator();
                 switch (wybor2) {
                     case 0:
                         comparator = new NameComparator();
@@ -22,10 +23,10 @@ public class Program {
                         comparator = new CategoryComparator();
                         break;
                     case 2:
-                        comparator = new PirceComparatorA();
+                        comparator = new PriceComparatorA();
                         break;
                     case 3:
-                        comparator = new PirceComparatorZ();
+                        comparator = new PriceComparatorZ();
                         break;
                 }
                 Collections.sort(wydatki, comparator);
@@ -41,7 +42,7 @@ public class Program {
             default:
                 System.out.println("Wybierz jedną z opcji z menu");
         }
-        //      }
+              }
 
     }
 

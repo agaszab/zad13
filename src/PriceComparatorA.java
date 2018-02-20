@@ -1,6 +1,6 @@
 import java.util.Comparator;
 
-    public class PirceComparatorA implements Comparator <Product> {
+    public class PriceComparatorA implements Comparator <Product> {
 
         @Override
         public int compare (Product p1, Product p2)  {
@@ -10,6 +10,6 @@ import java.util.Comparator;
 
         }
 
-        public PirceComparatorA() {
+        public PriceComparatorA() {
         }
     }
