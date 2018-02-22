@@ -14,33 +14,22 @@ public class Program {
         ArrayList<Product> wydatki = new ArrayList<>();
         Product prod=new Product();
         System.out.println(wybor1);
-       // Expense expense = new Expense();
 
         while (wybor1!=3) {
         wybor1 = pokazOpcje();
         switch (wybor1) {
             case 0:  prod.addProduct(wydatki); break;
             case 1:  while (wybor2!=4) {
-                wybor2 = pokazSortowanie();
+                if (wybor2!=4) wybor2 = pokazSortowanie();
                 Comparator comparator = new NameComparator();
                 switch (wybor2) {
-                    case 0:
-                        comparator = new NameComparator();
-                        break;
-                    case 1:
-                        comparator = new CategoryComparator();
-                        break;
-                    case 2:
-                        comparator = new PriceComparatorA();
-                        break;
-                    case 3:
-                        comparator = new PriceComparatorZ();
-                        break;
-                    case 4: comparator =null;
-                        break;
-
+                    case 0: comparator = new NameComparator(); break;
+                    case 1:  comparator = new CategoryComparator(); break;
+                    case 2: comparator = new PriceComparatorA(); break;
+                    case 3: comparator = new PriceComparatorZ(); break;
+                    case 4: comparator =null;  break;
                 }
-                if (wydatki.isEmpty()) System.out.print("Nie ma żadnych wydatków.");
+                if (wydatki.isEmpty()) { System.out.print("Nie ma żadnych wydatków."); wybor2=4; }
                 else if (comparator != null) {
                     Collections.sort(wydatki, comparator);
                     System.out.println(wydatki);

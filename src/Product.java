@@ -52,7 +52,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Nazwa produktu/usługi: " + name + " (" + description + "), kategoria: "+category+", cena: " + price +"\n";
+        return "\n"+"Nazwa produktu/usługi: " + name + " (" + description + "), kategoria: "+category+", cena: " + price ;
     }
 
     public void addProduct(ArrayList list) {
