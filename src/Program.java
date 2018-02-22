@@ -10,16 +10,17 @@ public class Program {
 
 
        int wybor1=0;
-       int wybor2=0;
+
         ArrayList<Product> wydatki = new ArrayList<>();
         Product prod=new Product();
         System.out.println(wybor1);
-
+        int wybor2=0;
         while (wybor1!=3) {
         wybor1 = pokazOpcje();
         switch (wybor1) {
             case 0:  prod.addProduct(wydatki); break;
-            case 1:  while (wybor2!=4) {
+            case 1:
+                while (wybor2!=4) {
                 if (wybor2!=4) wybor2 = pokazSortowanie();
                 Comparator comparator = new NameComparator();
                 switch (wybor2) {
@@ -29,7 +30,7 @@ public class Program {
                     case 3: comparator = new PriceComparatorZ(); break;
                     case 4: comparator =null;  break;
                 }
-                if (wydatki.isEmpty()) { System.out.print("Nie ma żadnych wydatków."); wybor2=4; }
+                if (wydatki.isEmpty()) { System.out.print("Nie ma żadnych wydatków."); wybor2=4;}
                 else if (comparator != null) {
                     Collections.sort(wydatki, comparator);
                     System.out.println(wydatki);
