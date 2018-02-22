@@ -10,7 +10,6 @@ public class Expense {
     ArrayList<Product> wydatki = new ArrayList<>();
 
 
-
     public void druk() {
         if (wydatki.isEmpty()) System.out.print("Nie ma żadnych wydatków.");
         else
