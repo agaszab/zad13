@@ -1,3 +1,5 @@
+package sortowanie;
+import dane.Product;
 import java.util.Comparator;
 
 public class PriceComparatorZ implements Comparator <Product> {

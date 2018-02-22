@@ -1,3 +1,5 @@
+package app;
+
 public enum  Options {
 
     NEWEXPENSE ("Dodaj nowy wydatek", 0),

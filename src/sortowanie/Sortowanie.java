@@ -1,8 +1,11 @@
+package sortowanie;
+
 public enum Sortowanie {
     NAZWA ("po nazwie", 0),
     KATEGORIA ("po kategorii", 1),
     KWOTAAZ ("po kwocie rosnąco", 2),
-    KWOTAZA ("po kwocie malejąco", 3),;
+    KWOTAZA ("po kwocie malejąco", 3),
+    ENDSORT ("powrót do menu głównego", 4);
 
 private int index;
 private String name;
