@@ -11,26 +11,31 @@ public class Program {
 
         int wyborOpcji = 0;
         int wyborSortowania = 0;
-        ArrayList<Product> wydatki = new ArrayList<>();
+        ArrayList<Product> listaWydatkow = new ArrayList<>();
         Wydatki wyd = new Wydatki();
+
         System.out.println(wyborOpcji);
-
-
         while (wyborOpcji != 3) {
             wyborOpcji = wyd.pokazOpcje();
             switch (wyborOpcji) {
-                case 0: wyd.addProduct(wydatki);
+                case 0:
+                    wyd.addProduct(listaWydatkow);
                     break;
-                case 1:  if (wydatki.isEmpty()) {
+                case 1:
+                    if (listaWydatkow.isEmpty()) {
                         System.out.print("Nie ma żadnych wydatków.");
                         break;
                     } else {
-                        wyd.sortowanie(wyborSortowania, wydatki);
+                        wyborSortowania = wyd.pokazSortowanie();
+
+                        wyd.sortowanie(wyborSortowania, listaWydatkow);
                         break;
                     }
-                case 2: wyd.doPliku(wydatki);
+                case 2:
+                    wyd.doPliku(listaWydatkow);
                     break;
-                case 3: break;
+                case 3:
+                    break;
                 default:
                     System.out.println("Wybierz jedną z opcji z menu");
             }
@@ -38,6 +43,6 @@ public class Program {
 
     }
 
-
 }
+
 

@@ -82,8 +82,7 @@ public class  Wydatki {
     public static void sortowanie(int wyborSortowania, ArrayList wydatki){
 
         while (wyborSortowania!=4) {
-            wyborSortowania = pokazSortowanie();
-            Comparator comparator = new NameComparator();
+             Comparator comparator = new NameComparator();
             switch (wyborSortowania) {
                 case 0: comparator = new NameComparator(); break;
                 case 1: comparator = new CategoryComparator(); break;
